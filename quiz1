@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-LearnHub | Quiz</title>
+  <link rel="stylesheet" type="text/css" href="./css/demo1.css" />
   <style>
     /* Global Styles */
     * {
@@ -26,7 +27,7 @@
       padding: 15px 20px;
       text-align: center;
       font-size: 24px;
-      font-weight: 600;
+      font-weight:800;
     }
 
     nav {
@@ -40,7 +41,7 @@
       color: #fff;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 800;
       transition: color 0.3s ease;
     }
 
@@ -52,7 +53,7 @@
     .progress {
       background: #ddd;
       height: 8px;
-      width: 100%;
+      width: 200%;
     }
     .progress-bar {
       height: 8px;
@@ -62,12 +63,12 @@
     }
     @keyframes progressAnim {
       from { width: 0; }
-      to { width: 60%; }
+      to { width: 50%; }
     }
 
     /* Main Section */
     main {
-      max-width: 900px;
+      max-width: 1200;
       margin: 20px auto;
       padding: 20px;
     }
@@ -118,8 +119,8 @@
     .options input[type="radio"]:checked + span {
       background: #4a90e2;
       color: #fff;
-      border-radius: 5px;
-      padding: 5px 8px;
+      border-radius: 7px;
+      padding: 5px 9px;
     }
     .options label:hover {
       background: #f0f4f8;
@@ -128,7 +129,7 @@
     /* Submit Button*/
     .submit-btn {
       display: block;
-      width: 100%;
+      width: 300%;
       padding: 12px;
       font-size: 18px;
       border: none;
@@ -147,11 +148,11 @@
     .result-box {
       background: #eaf4ff;
       border: 1px solid #4a90e2;
-      padding: 15px;
+      padding: 20px;
       margin-top: 20px;
       border-radius: 8px;
       text-align: center;
-      font-weight: 500;
+      font-weight: 900;
       color: #2c3e50;
     }
 
@@ -187,10 +188,10 @@
 
   <!-- Navbar -->
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Quiz</a>
-    <a href="#">Contact</a>
+    <a href="./demo2.html">Home</a>
+    <a href="./demo3.html">Courses</a>
+    <a href="./demo4.html">Quiz</a>
+    <a href="./demo5.html">Contact</a>
   </nav>
 
   <!-- Progress Bar -->
@@ -207,7 +208,7 @@
 
     <form class="quiz-form">
       <!-- Q1 -->
-      <div class="question-card">
+      <div class="question-card" id="Home">
         <h3>A. Which tag is used for the largest heading in HTML?</h3>
         <div class="options">
           <label><input type="radio" name="q1"><span>&lt;h1&gt;</span></label>
@@ -218,7 +219,7 @@
       </div>
 
       <!-- Q2 -->
-      <div class="question-card">
+      <div class="question-card" id="Courses">
         <h3>B. Which property is used to change text color in CSS?</h3>
         <div class="options">
           <label><input type="radio" name="q2"><span>font-style</span></label>
@@ -229,9 +230,9 @@
       </div>
 
       <!-- Q3 -->
-      <div class="question-card">
+      <div class="question-card" id="Quiz">
         <h3>C. Which attribute is used to add a link in HTML?</h3>
-        <div class="options">
+        <div class="options"> 
           <label><input type="radio" name="q3"><span>src</span></label>
           <label><input type="radio" name="q3"><span>href</span></label>
           <label><input type="radio" name="q3"><span>alt</span></label>
@@ -240,7 +241,7 @@
       </div>
 
       <!-- Q4 -->
-      <div class="question-card">
+      <div class="question-card" id="Contact">
         <h3>D. Which CSS property is used to create space inside an element?</h3>
         <div class="options">
           <label><input type="radio" name="q4"><span>margin</span></label>
@@ -251,7 +252,7 @@
       </div>
 
       <!-- Q5 -->
-      <div class="question-card">
+      <div class="question-card" id="Image">
         <h3>E. Which tag is used to insert an image in HTML?</h3>
         <div class="options">
           <label><input type="radio" name="q5"><span>&lt;picture&gt;</span></label>
@@ -277,4 +278,3 @@
   </footer>
 </body>
 </html>
-
