@@ -1,0 +1,181 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>E-Gift Shop - Quiz 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand" aria-label="Giftify - Your E-Gift Shop">Giftify <span class="tagline">– Your E-Gift Shop</span></h1>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="./offers.html">Offers</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-grid">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2 id="hero-heading" class="hero-title">Send smiles, delivered instantly</h2>
+        <p class="hero-sub">Beautiful curated gifts for every occasion — fast delivery & gift wrap included.</p>
+        <a class="btn primary" href="#products">Shop Featured Gifts</a>
+      </div>
+    </section>
+
+    <!-- Main content + Sidebar layout -->
+    <div class="content-area">
+      <main class="main" aria-labelledby="featured-heading">
+        <!-- Featured Gifts -->
+        <section id="products" class="featured-section">
+          <h3 id="featured-heading">Featured Gifts</h3>
+
+          <!-- Grid: product cards -->
+          <div class="product-grid" role="list">
+
+            <!-- Product card 1 -->
+            <article class="product-card" role="listitem">
+              <div class="product-media">
+                <img src="./images/handmade.png" alt="Handmade ceramic mug with floral design" />
+              </div>
+              <div class="product-body">
+                <h4>Floral Ceramic Mug</h4>
+                <p class="price">₹599</p>
+                <div class="card-actions">
+                  <button class="btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product card 2 -->
+            <article class="product-card" role="listitem">
+              <div class="product-media">
+                <img src="./images/cho.png" alt="Box of assorted handmade chocolates" />
+              </div>
+              <div class="product-body">
+                <h4>Assorted Chocolates Box</h4>
+                <p class="price">₹899</p>
+                <div class="card-actions">
+                  <button class="btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product card 3 -->
+            <article class="product-card" role="listitem">
+              <div class="product-media">
+                <img src="./images/rose.png" alt="Hand-tied rose bouquet in kraft wrap" />
+              </div>
+              <div class="product-body">
+                <h4>Rose Bouquet (8 stems)</h4>
+                <p class="price">₹749</p>
+                <div class="card-actions">
+                  <button class="btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product card 4 -->
+            <article class="product-card" role="listitem">
+              <div class="product-media">
+                <img src="./images/photo.png" alt="Customizable wooden photo frame" />
+              </div>
+              <div class="product-body">
+                <h4>Wooden Photo Frame</h4>
+                <p class="price">₹499</p>
+                <div class="card-actions">
+                  <button class="btn">Add to Cart</button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- More content placeholders (articles) -->
+        <section class="info-cards">
+          <article>
+            <h4>Why Giftify?</h4>
+            <p>Curated gifts, sustainable packaging and same-day delivery in select cities.</p>
+          </article>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="offers" aria-labelledby="offers-heading">
+        <h4 id="offers-heading" class="sidebar-title">Special Offers</h4>
+
+        <div class="offer-card">Buy 1 Get 1 Free on select mugs</div>
+        <div class="offer-card">Flat 20% Off on chocolates</div>
+        <div class="offer-card">Free shipping over ₹999</div>
+
+        <div class="sale-banner" role="complementary" aria-label="Upcoming festival sale">
+          <strong>Upcoming Festival Sale</strong>
+          <p>Save up to 40% — starts Oct 20</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p>© <span id="year"></span> Giftify. All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <p>Contact: <a href="mailto:hello@giftify.example">hello@giftify.example</a> | <a href="tel:+911234567890">+91 12345 67890</a></p>
+        <p class="socials">Facebook | Instagram | Twitter</p>
+      </div>
+
+      <div class="footer-col newsletter">
+        <form class="newsletter-form" aria-label="Newsletter subscription form">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Small script for year and mobile nav toggle (keeps HTML accessible)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+
+    // Simple form handling (prevents navigation)
+    document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thanks! You\'ll receive updates at ' + document.getElementById('email').value);
+    });
+  </script>
+</body>
+</html>
+
+
