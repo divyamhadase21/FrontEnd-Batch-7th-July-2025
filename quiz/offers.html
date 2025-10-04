@@ -1,0 +1,206 @@
+<!-- offers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giftify - Special Offers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Offers grid */
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .offer-card {
+      background: #f7f7f7;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      transition: background 0.3s ease;
+    }
+
+    .offer-card:hover {
+      background: #ffe9f5;
+    }
+
+    .offer-card.highlight {
+      border: 2px solid #d63384;
+    }
+
+    .offer-tag {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #fff;
+      background: #b71cd2;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .offer-tag.hot {
+      background: #e63946;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 1rem;
+      height: fit-content;
+    }
+
+    aside.sidebar h3 {
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar .offer-card {
+      margin-bottom: 1rem;
+    }
+
+    .festival-banner {
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .page-grid {
+        grid-template-columns: 1fr;
+      }
+      aside.sidebar {
+        position: static;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand" aria-label="Giftify - Your E-Gift Shop">Giftify <span class="tagline">– Your E-Gift Shop</span></h1>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="./offers.html" class="active">Offers</a></li>
+          <li><a href="./cart.html">Cart</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-grid">
+    <!-- Main offers section -->
+    <section class="offers-section">
+      <h2>🎉 Special Offers & Deals</h2>
+      <p class="section-sub">Grab these limited-time offers before they’re gone!</p>
+
+      <div class="offers-grid">
+        <article class="offer-card">
+          <h3>Buy 1 Get 1 Free</h3>
+          <p>Available on select mugs collection.</p>
+          <span class="offer-tag">Limited Offer</span>
+        </article>
+
+        <article class="offer-card">
+          <h3>Flat 20% Off</h3>
+          <p>On all chocolate gift boxes. Perfect for sweet celebrations.</p>
+          <span class="offer-tag">Best Seller</span>
+        </article>
+
+        <article class="offer-card">
+          <h3>Free Shipping</h3>
+          <p>On orders above ₹999 across all categories.</p>
+          <span class="offer-tag">Always On</span>
+        </article>
+
+        <article class="offer-card highlight">
+          <h3>Festival Sale</h3>
+          <p>Save up to 40% on curated gift combos. Starts <strong>Oct 20</strong>.</p>
+          <span class="offer-tag hot">🔥 Hot Deal</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Special Offers</h3>
+      <article class="offer-card">
+        <h4>Buy 1 Get 1 Free</h4>
+        <p>On mugs collection.</p>
+      </article>
+      <article class="offer-card">
+        <h4>Flat 20% Off</h4>
+        <p>On chocolate gift boxes.</p>
+      </article>
+      <article class="offer-card">
+        <h4>Free Shipping</h4>
+        <p>Orders above ₹999.</p>
+      </article>
+      <div class="festival-banner">
+        Upcoming Festival Sale 🎊  
+        <p>Starts Oct 20 – Save Big!</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <p>© <span id="year"></span> Giftify. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a></p>
+      </div>
+      <div class="footer-col">
+        <p>Contact: <a href="mailto:hello@giftify.example">hello@giftify.example</a> | <a href="tel:+911234567890">+91 12345 67890</a></p>
+        <p class="socials">Facebook | Instagram | Twitter</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
