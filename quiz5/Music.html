@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Music Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: black;
+      margin-left: 5px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 5px 10px;
+      width: 400px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 8px;
+    }
+
+    .search-box button {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: darkred;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: white;
+      border-right: 1px solid #ddd;
+      padding: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 8px 0;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #f0f0f0;
+      color: red;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .video {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video:hover {
+      transform: scale(1.03);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .video-info {
+      padding: 10px;
+    }
+
+    .video-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .video-info p {
+      font-size: 14px;
+      color: gray;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+      .search-box {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🎵 You<span>Music</span></div>
+    <div class="search-box">
+      <input type="text" placeholder="Search Music">
+      <button>Search</button>
+    </div>
+  </header>
+
+ <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="./home.html">🏠 Home</a>
+    <a href="./trending.html">🔥 Trending</a>
+    <a href="./Music.html">🎵 Music</a>
+    <a href="./gaming.html">🎮 Gaming</a>
+    <a href="./news.html">📰 News</a>
+    <a href="./movies.html">🎬 Movies</a>
+    <a href="./live.html">📺 Live</a>
+    <a href="./setting.html">⚙️ Settings</a>
+  </div>
+  
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="section-title">Trending Music Videos</div>
+    <div class="video-grid">
+
+      <!-- 1 -->
+      <div class="video">
+        <img src="./images/tere naam.png" class="thumbnail" alt="Video 1">
+        <div class="video-info">
+          <h3>Song: Tere Naam</h3>
+          <p>PSY • 3.4M views • 1 day ago</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="video">
+        <img src="./images/pyar.png" class="thumbnail" alt="Video 2">
+        <div class="video-info">
+          <h3>Song: kaho na pyaar hai</h3>
+          <p>Ed Sheeran • 2.1M views • 3 days ago</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="video">
+        <img src="./images/koi.png" class="thumbnail" alt="Video 3">
+        <div class="video-info">
+          <h3>Song: koi mil gaya</h3>
+          <p>Luis Fonsi • 4M views • 1 week ago</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="video">
+        <img src="./images/chand.png" class="thumbnail" alt="Video 4">
+        <div class="video-info">
+          <h3>Song: chand sitare</h3>
+          <p>Ed Sheeran • 1.8M views • 2 days ago</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="video">
+        <img src="./images/sathiya.png" class="thumbnail" alt="Video 5">
+        <div class="video-info">
+          <h3>Song: sathiyaa</h3>
+          <p>Justin Bieber • 1.5M views • 4 days ago</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="video">
+        <img src="./images/hum.png" class="thumbnail" alt="Video 6">
+        <div class="video-info">
+          <h3>Song: Hum saath saath hai</h3>
+          <p>Maroon 5 • 2M views • 3 days ago</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="video">
+        <img src="./images/diya.png" class="thumbnail" alt="Video 7">
+        <div class="video-info">
+          <h3>Song: sil sila ye chahat ka</h3>
+          <p>The Weeknd • 2.3M views • 2 weeks ago</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="video">
+        <img src="./images/ye.png" class="thumbnail" alt="Video 8">
+        <div class="video-info">
+          <h3>Song: ye ladka hai allah</h3>
+          <p>Rick Astley • 5M views • 1 month ago</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
