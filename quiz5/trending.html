@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Trending</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: black;
+      margin-left: 5px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: white;
+      border-right: 1px solid #ddd;
+      padding: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 8px 0;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #f0f0f0;
+      color: red;
+    }
+
+    /* Main */
+    .main-content {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 span {
+      font-size: 28px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .video {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video:hover {
+      transform: scale(1.03);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .video-info {
+      padding: 10px 15px;
+    }
+
+    .video-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .video-info p {
+      font-size: 14px;
+      color: gray;
+    }
+
+    /* Back Button */
+    .back-btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: darkred;
+    }
+
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🔥 You<span>Tube</span></div>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="./home.html">🏠 Home</a>
+    <a href="./trending.html">🔥 Trending</a>
+    <a href="./Music.html">🎵 Music</a>
+    <a href="./gaming.html">🎮 Gaming</a>
+    <a href="./news.html">📰 News</a>
+    <a href="./movies.html">🎬 Movies</a>
+    <a href="./live.html">📺 Live</a>
+    <a href="./setting.html">⚙️ Settings</a>
+  </div>
+ 
+  <!-- Trending Section -->
+  <div class="main-content">
+    <h2><span>🔥</span> Trending Now</h2>
+
+    <div class="video-grid">
+      
+      <!-- 1 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/9bZkp7q19f0/maxresdefault.jpg" class="thumbnail" alt="Video 1">
+        <div class="video-info">
+          <h3>Gangnam Style - PSY</h3>
+          <p>OfficialPSY • 5.2B views • 8 years ago</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/3fumBcKC6RE/maxresdefault.jpg" class="thumbnail" alt="Video 2">
+        <div class="video-info">
+          <h3>Top 10 AI Inventions 2025</h3>
+          <p>FutureTech • 4.5M views • 2 weeks ago</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/FTQbiNvZqaY/maxresdefault.jpg" class="thumbnail" alt="Video 3">
+        <div class="video-info">
+          <h3>HTML & CSS Crash Course</h3>
+          <p>CodeWithMe • 3.9M views • 5 days ago</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg" class="thumbnail" alt="Video 4">
+        <div class="video-info">
+          <h3>Deep Ocean Wonders 4K</h3>
+          <p>EarthVision • 2.1M views • 1 week ago</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/uelHwf8o7_U/maxresdefault.jpg" class="thumbnail" alt="Video 5">
+        <div class="video-info">
+          <h3>Justin Bieber - Sorry (Official Video)</h3>
+          <p>JustinBieberVEVO • 3.2B views • 9 years ago</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="video">
+        <img src="./images/gadgets.png" class="thumbnail" alt="Video 6">
+        <div class="video-info">
+          <h3>Top 10 Gadgets You Must See</h3>
+          <p>TechZone • 2.5M views • 2 days ago</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/LXb3EKWsInQ/maxresdefault.jpg" class="thumbnail" alt="Video 7">
+        <div class="video-info">
+          <h3>Relaxing Nature in 4K HDR</h3>
+          <p>NatureRelax • 6.8M views • 3 months ago</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="video">
+        <img src="./images/travel.png" class="thumbnail" alt="Video 8">
+        <div class="video-info">
+          <h3>Top Travel Destinations 2025</h3>
+          <p>TravelNow • 1.7M views • 2 weeks ago</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
