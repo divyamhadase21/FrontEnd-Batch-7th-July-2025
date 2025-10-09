@@ -1,1 +1,301 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      color: red;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: black;
+      margin-left: 5px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 5px 10px;
+      width: 400px;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 8px;
+    }
+
+    .search-box button {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .search-box button:hover {
+      background-color: darkred;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: white;
+      border-right: 1px solid #ddd;
+      padding: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 8px 0;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #f0f0f0;
+      color: red;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .video {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .video:hover {
+      transform: scale(1.03);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .video-info {
+      padding: 10px;
+    }
+
+    .video-info h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .video-info p {
+      font-size: 14px;
+      color: gray;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+      .main-content {
+        margin-left: 0;
+      }
+      .search-box {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">▶ You<span>Tube</span></div>
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      <button>Search</button>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="./home.html">🏠 Home</a>
+    <a href="./trending.html">🔥 Trending</a>
+    <a href="./Music.html">🎵 Music</a>
+    <a href="./gaming.html">🎮 Gaming</a>
+    <a href="./news.html">📰 News</a>
+    <a href="./movies.html">🎬 Movies</a>
+    <a href="./live.html">📺 Live</a>
+    <a href="./setting.html">⚙️ Settings</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="video-grid">
+
+      <!-- 1 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg" class="thumbnail" alt="Video 1">
+        <div class="video-info">
+          <h3>Nature Documentary 4K</h3>
+          <p>Wild Earth • 2.3M views • 3 days ago</p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/tgbNymZ7vqY/maxresdefault.jpg" class="thumbnail" alt="Video 2">
+        <div class="video-info">
+          <h3>Relaxing Music Mix 2025</h3>
+          <p>Chill Vibes • 1.1M views • 1 week ago</p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="video">
+        <img src="./images/ed.png" class="thumbnail" alt="Video 3">
+        <div class="video-info">
+          <h3>Live Performance - Ed Sheeran</h3>
+          <p>Music Channel • 980K views • 2 weeks ago</p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/3fumBcKC6RE/maxresdefault.jpg" class="thumbnail" alt="Video 4">
+        <div class="video-info">
+          <h3>Top 10 Coding Tips</h3>
+          <p>TechZone • 820K views • 1 day ago</p>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="video">
+        <img src="./images/paris.png" class="thumbnail" alt="Video 5">
+        <div class="video-info">
+          <h3>Travel Vlog: Paris 2025</h3>
+          <p>Wanderlust • 1.5M views • 4 days ago</p>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/ScMzIvxBSi4/maxresdefault.jpg" class="thumbnail" alt="Video 6">
+        <div class="video-info">
+          <h3>Space Facts You Didn’t Know</h3>
+          <p>ScienceLab • 2.1M views • 1 month ago</p>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/FTQbiNvZqaY/maxresdefault.jpg" class="thumbnail" alt="Video 7">
+        <div class="video-info">
+          <h3>Learn HTML & CSS in 10 Minutes</h3>
+          <p>CodeWithMe • 900K views • 5 days ago</p>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/mWRsgZuwf_8/maxresdefault.jpg" class="thumbnail" alt="Video 8">
+        <div class="video-info">
+          <h3>Motivational Speech: Never Give Up</h3>
+          <p>InspireDaily • 1.8M views • 2 weeks ago</p>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/uelHwf8o7_U/maxresdefault.jpg" class="thumbnail" alt="Video 9">
+        <div class="video-info">
+          <h3>New Music Video 2025</h3>
+          <p>PopWorld • 3.4M views • 1 day ago</p>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/kXYiU_JCYtU/maxresdefault.jpg" class="thumbnail" alt="Video 10">
+        <div class="video-info">
+          <h3>Gaming Montage Highlights</h3>
+          <p>GamerZone • 2M views • 1 week ago</p>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/9bZkp7q19f0/maxresdefault.jpg" class="thumbnail" alt="Video 11">
+        <div class="video-info">
+          <h3>Dance Hits Compilation</h3>
+          <p>DanceHub • 5M views • 3 days ago</p>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="video">
+        <img src="https://i.ytimg.com/vi/E07s5ZYygMg/maxresdefault.jpg" class="thumbnail" alt="Video 12">
+        <div class="video-info">
+          <h3>Frontend Development Tutorial</h3>
+          <p>DevLearn • 750K views • 4 days ago</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
